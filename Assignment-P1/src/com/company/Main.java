@@ -272,6 +272,7 @@ public class Main {
                 lead = leadsManager.getLeadsById(leadId);
             }
         }
+        interaction.setLead_id(lead);
 
         System.out.print("Interaction Method (SNS / email / telephone / face to face) : ");
         String method = interactionInfoInput.nextLine();

@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Interactions {
     private String inter_id;
     private String DoI;
-    private Leads Lead;
+    private Leads lead;
     private String Means;
     private String Potential;
 
@@ -31,11 +31,11 @@ public class Interactions {
     }
 
     public Leads getLead_id(){
-        return Lead;
+        return lead;
     }
 
     public void setLead_id(Leads Lead_id){
-        this.Lead = Lead_id;
+        this.lead = Lead_id;
     }
 
     public String getMeans(){
@@ -56,7 +56,7 @@ public class Interactions {
 
     @Override
     public String toString() {
-        return "ID: "+inter_id +", DOI: " + DoI + ", lead_ID: " + Lead.getLead_id() + ", Interaction Method: " + Means + ", Potential: "
+        return "ID: "+inter_id +", DOI: " + DoI + ", lead_ID: " + lead.getLead_id() + ", Interaction Method: " + Means + ", Potential: "
                 + Potential;
     }
 

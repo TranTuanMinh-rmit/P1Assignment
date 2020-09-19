@@ -106,7 +106,7 @@ public class InteractionsManager{
                     case "potential": {
                         newInfo = updateInfoPrompt(target);
                         inter.setPotential(newInfo);
-                        Boolean isValid = InputValidator.getInstance().validateAddress(newInfo);
+                        Boolean isValid = InputValidator.getInstance().validatePotential(newInfo);
                         if(isValid){
                             JOptionPane.showMessageDialog(null,"valid form!");
                             inter.setPotential(newInfo);

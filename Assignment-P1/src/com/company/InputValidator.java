@@ -27,6 +27,7 @@ public class InputValidator {
     private final String phoneRegex = "^(\\d{3}[- .]?){2}\\d{4}$";
     private final String genderRegex ="[0-1]";
     private final String addressRegex = "^(\\d{3}[- .,]?)+[a-zA-Z]";
+    private final String potentialRegex = "[PNEUG]";
 
     public boolean validateName(String name) {
         // Check if user input is 'null'
@@ -95,5 +96,15 @@ public class InputValidator {
         }
         return true;
 
+    }
+
+    public boolean validatePotential(String potential){
+        if (potential.trim().equals("")) {
+            return true;
+        }else{
+            Pattern pattern = Pattern.compile(potentialRegex);
+            Matcher matcher = pattern.matcher(potential);
+            return matcher.matches();
+        }
     }
 }
