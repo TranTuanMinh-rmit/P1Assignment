@@ -5,6 +5,7 @@ import com.company.Classes.Leads;
 
 
 import javax.swing.*;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -26,6 +27,23 @@ public class LeadsManager{
         }
         return null;
     }
+
+
+    ////Writing to file////
+    public void saveLeadToFile(Leads lead){
+        try{
+            FileWriter fileWriter = new FileWriter("leads.csv");
+            fileWriter.write(lead.toString());
+
+        }catch (IOException e){
+            System.out.println("Error occurred while writing customer to the file.");
+            e.printStackTrace();
+        }
+
+        System.out.println("saved! ");
+    }
+
+
 
 
     ///Adding a lead////

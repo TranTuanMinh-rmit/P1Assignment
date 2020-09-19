@@ -24,9 +24,9 @@ public class InputValidator {
     // regular expression for the right user input
     private final String nameRegex = "^[a-zA-Z\\s]+";
     private final String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
-    private final String phoneRegex = "^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\\s\\./0-9]*$";
+    private final String phoneRegex = "^(\\d{3}[- .]?){2}\\d{4}$";
     private final String genderRegex ="[0-1]";
-    private final String addressRegex = "\\d+\\s+([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)";
+    private final String addressRegex = "^(\\d{3}[- .,]?)+[a-zA-Z]";
 
     public boolean validateName(String name) {
         // Check if user input is 'null'

@@ -5,12 +5,8 @@ import com.company.Classes.Interactions;
 import com.company.Classes.Leads;
 
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -98,7 +94,8 @@ public class Main {
                 }
             }
         }
-    }
+
+     }
 
 
 
@@ -122,6 +119,7 @@ public class Main {
 
     }
 
+    
 
     /////Creating the Lead Object from the Class and User input////////
     private static Leads createLeadsObject(){
@@ -194,6 +192,9 @@ public class Main {
             System.out.println("Update customer failed.");
         }
     }
+
+
+
     /////////////////////////////////////////////////////////////////
 
 
